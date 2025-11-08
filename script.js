@@ -262,3 +262,104 @@
 //     }
 // }
 // console.log(`You entered ${counter} positive values`);
+
+
+// Level 3 - More Challenging
+
+// 19. ATM Simulator – Allow 3 withdrawals
+// Start with ₹1000 balance. Ask withdrawal amount 3 times.
+// If enough balance → deduct
+// Else → print “Insufficient balance”
+
+// Ans - 19
+// let balance = 1000;
+// let attempts = 0;
+
+// while (attempts < 3 && balance > 0) {
+//     let input = prompt(`Your current balance is ₹${balance}. Enter withdrawal amount:`);
+
+//     if (input === null || input.trim() === "") {
+//         alert("You cancelled the transaction!");
+//         break;
+//     }
+
+//     let withdrawalAmount = Number(input);
+
+//     if (isNaN(withdrawalAmount) || withdrawalAmount <= 0) {
+//         alert("Please enter a valid amount!");
+//         continue;
+//     }
+
+//     if (withdrawalAmount > balance) {
+//         alert("Insufficient balance!");
+//         continue;
+//     }
+
+//     balance -= withdrawalAmount;
+//     console.log(`Withdrawal of ₹${withdrawalAmount} successful. New balance: ₹${balance}`);
+//     attempts++;
+
+//     if (balance === 0) {
+//         alert("Your balance is now ₹0. No more withdrawals possible.");
+//         break;
+//     }
+
+//     if (attempts === 3) {
+//         alert("You have reached the maximum number of withdrawals.");
+//         break;
+//     }
+
+//     alert(`You have ${3 - attempts} withdrawal attempts left.`);
+// }
+
+// alert(`Transaction complete. Final balance: ₹${balance}`);
+
+
+// 20. Basic EMI Calculator
+
+// Input:
+// 	-Loan Amount
+// 	-Interest Rate (per year in %)
+// 	-Time (in years)
+
+// Output:
+// 	-EMI = P×R×(1+R)^N/(1+R)^N−1
+// 	-EMI = (P*R*(1+R)**N)/((1+R)**N-1)
+
+// Hint:
+// 	-Use R = interest_rate / (12 * 100)
+// 	-Use N = time * 12
+
+// Ans - 20
+
+// let loanAmount = prompt("Enter your loan amount: ");
+// let interestRate = prompt("Enter your Interest Rate (per year in %): ");
+// let time = prompt("Enter time (in years): ");
+
+// if (loanAmount === null || interestRate === null || time === null) {
+//     alert("You cancelled the input!");
+//     throw new Error("Input cancelled");
+// }
+
+// if (loanAmount.trim() === "" || interestRate.trim() === "" || time.trim() === "") {
+//     alert("Invalid input!");
+//     throw new Error("Invalid input");
+// }
+
+// let P = Number(loanAmount);
+// let R = Number(interestRate) / (12 * 100);
+// let N = Number(time) * 12
+
+// if (isNaN(P) || isNaN(R) || isNaN(N)) {
+//     alert("Invalid input! Please enter a number");
+//     throw new Error("Invalid input");
+// }
+
+// let EMI = (P * R * (1 + R) ** N) / ((1 + R) ** N - 1);
+// alert(`Your monthly EMI is: ₹${EMI.toFixed(2)}`);
+// console.log(`Your monthly EMI is: ₹${EMI.toFixed(2)}`);
+
+
+
+
+// Assignments - Completed by - Sameer

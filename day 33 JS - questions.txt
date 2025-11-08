@@ -58,3 +58,18 @@ Level 3 – More Tougher but Logical
 Start with ₹1000 balance. Ask withdrawal amount 3 times.
 If enough balance → deduct
 Else → print “Insufficient balance”
+
+20. Basic EMI Calculator
+
+Input:
+	-Loan Amount
+	-Interest Rate (per year in %)
+	-Time (in years)
+
+Output:
+	-EMI = P×R×(1+R)^N/(1+R)^N−1
+	-EMI = (P*R*(1+R)**N)/((1+R)**N-1)
+
+Hint:
+	-Use R = interest_rate / (12 * 100)
+	-Use N = time * 12
